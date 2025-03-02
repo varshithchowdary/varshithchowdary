@@ -1,0 +1,132 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 15%;
+}
+
+.contact-title {
+    position: relative;
+    text-align: center;
+}
+
+.contact-title h1 {
+    padding: 0px 30px;
+    font-size: 55px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.contact-title img {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+}
+
+.contact-section {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 400px;
+}
+
+.left h1 {
+    font-size: 45px;
+    font-weight: 700;
+    background: linear-gradient(267deg, #af02b5 0.36%, #e76c14 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.left p {
+    color: #d8d8d8;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    color: #d8d8d8;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-detail img {
+    width: 24px;
+    height: 24px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.right label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #d8d8d8;
+}
+
+.right input,
+.right textarea {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 5px;
+    background: #323232;
+    color: #A0A0A0;
+    font-size: 18px;
+    outline: none;
+}
+
+.right input::placeholder,
+.right textarea::placeholder {
+    color: #a0a0a0;
+    opacity: 0.8;
+}
+
+.right textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit {
+    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+    border: none;
+    padding: 15px 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    align-self: center;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    background: linear-gradient(267deg, #b923e1 0.36%, #da7c25 102.06%);
+}
