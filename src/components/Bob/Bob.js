@@ -8,7 +8,7 @@ const Bob = () => {
     <div id='home' className='bob'>
       <img src={circular} alt="" />
       <h1><span>I'm Varshith Chowdary,</span> developer based in India.</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eos  qui culpa libero quidem?</p>
+      <p>I am a frontend developer and a student, exploring the world of web development by building projects and learning new technologies.</p>
       <div className="bob-action">
 
       <AnchorLink className='anchor-link'offset={50} href='#contact'>
