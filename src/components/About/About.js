@@ -15,7 +15,7 @@ const About = () => {
         </div>
         <div className="about-right">
             <div className="about-para">
-                <p>Hello! I'm Varshit Choudhary, a passionate frontend developer and student eager to explore the world of technology. I enjoy building intuitive and interactive web applications, constantly learning new frameworks, and improving my problem-solving skills.</p>
+                <p>Hello! I'm Varshit Chowdary, a passionate frontend developer and student eager to explore the world of technology. I enjoy building intuitive and interactive web applications, constantly learning new frameworks, and improving my problem-solving skills.</p>
                 <p>My expertise includes C++, React.js, JavaScript, Flutter, and Python. I am always excited to work on innovative projects and collaborate with like-minded developers!</p>
             </div>
             <div className="about-skills">
