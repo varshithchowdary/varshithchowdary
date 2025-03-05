@@ -123,7 +123,7 @@
     border-radius: 50px;
     cursor: pointer;
     transition: transform 0.3s, background 0.3s;
-    align-self: center;
+    align-self: self-start;
 }
 
 .submit:hover {
