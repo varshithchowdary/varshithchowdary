@@ -14,7 +14,7 @@ const[menu,setMenu] = useState("home");
         <li><AnchorLink className='anchor-link' href='#home'><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>{menu==="home" ? <img src={underline} alt=''/>:<></>}</li>
         <li><AnchorLink className='anchor-link'offset={50} href='#about'><p onClick={()=>setMenu("about")}>About me</p></AnchorLink>{menu==="about" ? <img src={underline} alt=''/>:<></>}</li>
         <li><AnchorLink className='anchor-link'offset={50} href='#profiles'><p onClick={()=>setMenu("profiles")}>Profiles</p></AnchorLink>{menu==="profiles" ? <img src={underline} alt=''/>:<></>}</li>
-        <li><AnchorLink className='anchor-link'offset={50} href='#education'><p onClick={()=>setMenu("education")}>Education</p></AnchorLink>{menu==="eduation" ? <img src={underline} alt=''/>:<></>}</li>
+        <li><AnchorLink className='anchor-link'offset={50} href='#timeline'><p onClick={()=>setMenu("")}>Education</p></AnchorLink>{menu==="eduation" ? <img src={underline} alt=''/>:<></>}</li>
         <li><AnchorLink className='anchor-link'offset={50} href='#contact'><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>{menu==="contact" ? <img src={underline} alt=''/>:<></>}</li>
       </ul>
 

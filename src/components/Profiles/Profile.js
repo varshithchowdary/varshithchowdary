@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <div id='profiles' className='profile'>
       <div className='title'>
-        <h1>My Coding Profiles</h1>
+        <h1>My Profiles</h1>
         <img src={theme_pattern} alt="Theme Pattern" />
       </div>
       

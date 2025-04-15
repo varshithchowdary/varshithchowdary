@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Profile from './components/Profiles/Profile';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Timeline from './components/Timeline/Timeline';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Bob/>
     <About/>
     <Profile/>
+    <Timeline/>
     <Contact/>
     <Footer/>
    </div> 
