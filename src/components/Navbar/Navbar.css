@@ -1,49 +1,95 @@
-.navbar{
-    display:flex;
+.navbar {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px auto;
     padding: 0 20px;
     max-width: 1200px;
-}
-.navbar img{
+    position: relative;
+    z-index: 999;
+  }
+  
+  .nav-logo {
     width: 120px;
-}
-.nav-menu{
+  }
+  
+  .nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 60px;
     font-size: 18px;
-}
-
-.nav-connect{
-    padding: 10px 20px;
-    border-radius: 50px;
-    align-items: center;
-    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
-    font-size: 17px;
-    cursor: pointer;
-    transition:0.5s;
-}
-.nav-connect:hover{
-    transform: scale(1.05);
-}
-.nav-menu li{
+  }
+  
+  .nav-menu li {
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-}
-.nav-menu li img{
-    display: flex;
+  }
+  
+  .nav-menu li img {
     margin: auto;
     width: 50px;
-    z-index: -1;
-    right:0;
-    bottom: 0;
-}
-.anchor-link{
+  }
+  
+  .anchor-link {
     text-decoration: none;
     color: white;
-}
+  }
+  
+  .nav-connect {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .nav-connect:hover {
+    transform: scale(1.05);
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* 👇 Mobile Styling */
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #1a1a1a;
+      width: 100%;
+      padding: 20px 0;
+      gap: 25px;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+  
+    .nav-menu.open {
+      display: flex;
+    }
+  
+    .nav-connect-btn {
+      display: none;
+    }
+  
+    .nav-menu li img {
+      width: 40px;
+    }
+  
+    .nav-logo {
+      width: 100px;
+    }
+  }
+  
