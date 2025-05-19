@@ -1,103 +1,188 @@
 .bob {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 25px;
-    padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bob-left { 
+  flex: 1;
+  max-width: 600px;
+  animation: slideInLeft 2s ease forwards;
+  opacity: 0;
+}
+
+.bob-left h1 {
+  font-size: 3.0rem;
+  margin-bottom: 1rem;
+}
+
+.bob-left h1 span {
+  color: #F9D423; /* Yellow accent */
+  font-weight: 700;
+}
+
+.bob-left p {
+  font-size: 1.68rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.bob-action {
+  display: flex;
+  gap: 1.7rem;
+}
+
+.bob-connect, .bob-resume {
+  padding: 0.75rem 1.8rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.bob-connect {
+  background-color: #F9D423;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(249, 212, 35, 0.5);
+}
+
+.bob-connect:hover {
+  background-color: #f1c40f;
+  box-shadow: 0 6px 16px rgba(241, 196, 15, 0.7);
+  transform: translateY(-3px);
+}
+
+.bob-resume {
+  border: 2px solid #F9D423;
+  color: #F9D423;
+  background-color: transparent;
+}
+
+.bob-resume:hover {
+  background-color: #F9D423;
+  color: #222;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(249, 212, 35, 0.7);
+}
+
+/* Right side image container */
+.bob-right {
+  flex: 1;
+  max-width: 450px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circular image with glossy shadow and animations */
+.bob-right img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 50%;
+  filter: brightness(1.1) saturate(1.15);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 0 15px rgba(249, 212, 35, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glossy highlight */
+.bob-right::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 40%;
+  height: 20%;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50% / 100%;
+  filter: blur(10px);
+  pointer-events: none;
+  transform: rotate(-25deg);
+  z-index: 10;
+  animation: shimmer 5s ease-in-out infinite;
+}
+
+/* Hover effects */
+.bob-right img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 0 25px rgba(249, 212, 35, 0.35);
+}
+
+.bob-right img:hover::after {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+
+/* Floating up and down */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
   }
-  
-  .bob img {
-    margin-top: 26px;
-    height: 250px;
-    width: 250px;
+  50% {
+    transform: translateY(-10px) scale(1.03);
   }
-  
-  .bob h1 {
+}
+
+/* Shimmering glossy highlight */
+@keyframes shimmer {
+  0% {
+    left: 20%;
+    opacity: 0.3;
+  }
+  50% {
+    left: 60%;
+    opacity: 0.6;
+  }
+  100% {
+    left: 20%;
+    opacity: 0.3;
+  }
+}
+
+/* Slide and fade in text from left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive tweak */
+@media screen and (max-width: 900px) {
+  .bob {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
     text-align: center;
-    width: 50%;
-    font-size: 60px;
-    font-weight: 600;
   }
-  
-  .bob h1 span {
-    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .bob-left {
+    max-width: 100%;
+    animation: none;
+    opacity: 1;
   }
-  
-  .bob p {
-    width: 50%;
-    text-align: center;
-    font-size: 20px;
-    line-height: 28px;
+  .bob-right {
+    max-width: 80vw;
+    margin-bottom: 2rem;
   }
-  
-  .bob-action {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 50px;
+  .bob-right img {
+    width: 80vw;
+    max-width: none;
   }
-  
-  .bob-connect {
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 21px;
-    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .bob-connect:hover {
-    border: 1px solid white;
-    transform: scale(1.05);
-  }
-  
-  .bob-resume {
-    padding: 15px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 20px;
-    border: 2px solid white;
-  }
-  
-  .bob-resume:hover {
-    border: 2px solid purple;
-    transform: scale(1.05);
-    transition: 0.3s;
-  }
-  
-  .anchor-link {
-    text-decoration: none;
-    color: white;
-  }
-  
-  /* 🔽 Mobile Responsive Styles */
-  @media screen and (max-width: 768px) {
-    .bob h1 {
-      font-size: 32px;
-      width: 90%;
-    }
-  
-    .bob p {
-      font-size: 16px;
-      width: 90%;
-      line-height: 24px;
-    }
-  
-    .bob-action {
-      flex-direction: column;
-      gap: 15px;
-      font-size: 18px;
-    }
-  
-    .bob-connect,
-    .bob-resume {
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
+}
