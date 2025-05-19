@@ -72,7 +72,7 @@
 }
 
 .vertical-timeline-element-date {
-  color: #0f0f0ff9 !important; /* keep your accent color for dates */
+  color: #0f0f0ff9 !important; 
   font-weight: 600;
   font-size: 17px !important;
 }

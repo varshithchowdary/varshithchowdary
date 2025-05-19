@@ -2,7 +2,6 @@
   --yellow: #f5c518;
 }
 
-/* Slide-in animation */
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -54,14 +53,13 @@
   justify-content: space-between;
 }
 
-/* Shared hidden state */
+
 .contact-panel {
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Applied when in view */
 .contact-panel.visible {
   animation: slideInLeft 0.8s ease forwards;
 }
@@ -165,7 +163,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-  /* Contact.css additions */
 .error {
   color: #d63447;
   font-size: 0.85rem;

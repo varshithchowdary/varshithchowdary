@@ -15,13 +15,13 @@
 }
 
 .about {
-  padding: 40px 30px;   /* slightly increased padding */
+  padding: 40px 30px;   
   background-color: var(--white);
   color: var(--black);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;            /* slightly increased gap */
+  gap: 60px;            
 }
 
 
@@ -31,8 +31,7 @@
   color: var(--black);
   position: relative;
   text-align: center;
-  margin-bottom: 20px;  /* added margin bottom */
-}
+  margin-bottom: 20px; 
 
 .about-title h1::after {
   content: '';
@@ -51,7 +50,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 120px;             /* slight increase */
+  gap: 120px;          
 }
 
 .about-left img {
@@ -72,7 +71,7 @@
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 35px;            /* slight increase */
+  gap: 35px;          
 }
 
 .about-para p {
@@ -88,15 +87,15 @@
 }
 .achivements {
   display: flex;
-  gap: 45px;            /* small increase */
+  gap: 45px;            
   flex-wrap: wrap;
-  margin-top: 55px;      /* slight increase */
+  margin-top: 55px;      
 }
 
 .about-achivement {
   flex: 1;
   min-width: 180px;
-  padding: 28px;          /* a little more padding */
+  padding: 28px;          
   background-color: var(--black);
   color: var(--white);
   border-radius: 12px;
@@ -162,4 +161,5 @@
   .about-achivement p {
     font-size: 13px;
   }
+}
 }

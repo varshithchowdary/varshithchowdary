@@ -22,7 +22,7 @@
 }
 
 .bob-left h1 span {
-  color: #F9D423; /* Yellow accent */
+  color: #F9D423;
   font-weight: 700;
 }
 
@@ -72,7 +72,6 @@
   box-shadow: 0 6px 16px rgba(249, 212, 35, 0.7);
 }
 
-/* Right side image container */
 .bob-right {
   flex: 1;
   max-width: 450px;
@@ -82,7 +81,6 @@
   align-items: center;
 }
 
-/* Circular image with glossy shadow and animations */
 .bob-right img {
   width: 90%;
   max-width: 400px;
@@ -96,7 +94,7 @@
   animation: float 6s ease-in-out infinite;
 }
 
-/* Glossy highlight */
+
 .bob-right::after {
   content: '';
   position: absolute;
@@ -125,9 +123,7 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* Animations */
 
-/* Floating up and down */
 @keyframes float {
   0%, 100% {
     transform: translateY(0) scale(1);
@@ -137,7 +133,6 @@
   }
 }
 
-/* Shimmering glossy highlight */
 @keyframes shimmer {
   0% {
     left: 20%;
@@ -153,7 +148,6 @@
   }
 }
 
-/* Slide and fade in text from left */
 @keyframes slideInLeft {
   0% {
     opacity: 0;
