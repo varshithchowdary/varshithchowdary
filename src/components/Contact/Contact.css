@@ -1,181 +1,175 @@
+:root {
+  --yellow: #f5c518;
+}
+
+/* Slide-in animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 80px 15%;
-  }
-  
-  .contact-title {
-    position: relative;
-    text-align: center;
-  }
-  
-  .contact-title h1 {
-    padding: 0px 30px;
-    font-size: 55px;
-    font-weight: 700;
-    color: #ffffff;
-  }
-  
-  .contact-title img {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    z-index: -1;
-    max-width: 200px;
-  }
-  
+  padding: 60px 10vw;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.contact-title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.contact-title h1::after {
+  content: '';
+  content: '';
+  width: 80px;
+  height: 6px;
+  background-color: #facc15;
+  position: absolute;
+  bottom: -10px;
+  right: 49%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+/* Shared hidden state */
+.contact-panel {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Applied when in view */
+.contact-panel.visible {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+/* Left info panel */
+.left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.left h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.left p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.contact-detail:hover {
+  transform: translateX(4px);
+}
+
+.contact-detail img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Right form panel */
+.right {
+  flex: 1;
+  min-width: 300px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.right label {
+  font-weight: 500;
+}
+
+.right input,
+.right textarea {
+  padding: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.right input:focus,
+.right textarea:focus {
+  outline: none;
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255, 215, 24, 0.3);
+}
+
+.submit {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--yellow);
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit:hover {
+  background-color: #e6c200;
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
   .contact-section {
-    display: flex;
-    gap: 100px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-  }
-  
-  .left {
-    display: flex;
     flex-direction: column;
-    gap: 25px;
-    max-width: 400px;
   }
-  
-  .left h1 {
-    font-size: 45px;
-    font-weight: 700;
-    background: linear-gradient(267deg, #af02b5 0.36%, #e76c14 102.06%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+  .contact-panel {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .left p {
-    color: #d8d8d8;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  .contact-details {
-    display: flex;
-    flex-direction: column;
-    color: #d8d8d8;
-    gap: 20px;
-    font-size: 20px;
-  }
-  
-  .contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .contact-detail img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  .right label {
-    font-size: 18px;
-    font-weight: 500;
-    color: #d8d8d8;
-  }
-  
-  .right input,
-  .right textarea {
-    width: 100%;
-    border: none;
-    padding: 14px;
-    border-radius: 5px;
-    background: #323232;
-    color: #A0A0A0;
-    font-size: 18px;
-    outline: none;
-  }
-  
-  .right input::placeholder,
-  .right textarea::placeholder {
-    color: #a0a0a0;
-    opacity: 0.8;
-  }
-  
-  .right textarea {
-    height: 150px;
-    resize: none;
-  }
-  
-  .submit {
-    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
-    border: none;
-    padding: 15px 50px;
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
-    align-self: self-start;
-  }
-  
-  .submit:hover {
-    transform: scale(1.05);
-    background: linear-gradient(267deg, #b923e1 0.36%, #da7c25 102.06%);
-  }
-  
-  /* 🔽 Mobile Responsive */
-  @media screen and (max-width: 768px) {
-    .contact {
-      padding: 40px 20px;
-      gap: 40px;
-    }
-  
-    .contact-title h1 {
-      font-size: 36px;
-    }
-  
-    .contact-title img {
-      max-width: 140px;
-      bottom: -5px;
-    }
-  
-    .contact-section {
-      flex-direction: column;
-      gap: 40px;
-    }
-  
-    .left h1 {
-      font-size: 32px;
-      text-align: center;
-    }
-  
-    .left p {
-      font-size: 16px;
-      text-align: center;
-    }
-  
-    .contact-details {
-      font-size: 16px;
-      align-items: center;
-    }
-  
-    .right label {
-      font-size: 16px;
-    }
-  
-    .submit {
-      align-self: center;
-      font-size: 18px;
-      padding: 12px 40px;
-    }
-  }
-  
+  /* Contact.css additions */
+.error {
+  color: #d63447;
+  font-size: 0.85rem;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  display: block;
+}
